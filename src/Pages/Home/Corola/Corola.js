@@ -28,7 +28,7 @@ export default function Example() {
         <AccordionHeader onClick={() => handleOpen(2)}>
           How to solve our problem?
         </AccordionHeader>
-        <AccordionBody>
+        <AccordionBody >
           We're not always in the position that we want to be at. We're
           constantly growing. We're constantly making mistakes. We're constantly
           trying to express ourselves and actualize our dreams.

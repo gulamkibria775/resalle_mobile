@@ -38,7 +38,7 @@ const Navbar = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <Link to="/" className="btn btn-ghost normal-case text-xl visible md:invisible"><img className='w-12 m-5' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPtfg1dHS79cFBmaRilYwh6HTQA_JyHJ5a4Q&usqp=CAU" alt="" /> Antic Company</Link>
+                <Link to="/" className="btn btn-ghost normal-case text-xl invisible md:visible"><img className='w-12 m-5' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPtfg1dHS79cFBmaRilYwh6HTQA_JyHJ5a4Q&usqp=CAU" alt="" /> Antic Company</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
