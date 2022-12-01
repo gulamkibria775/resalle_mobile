@@ -21,6 +21,7 @@ import Allbuyer from "../../Component/Admin/Allbuyer/Allbuyer";
 import Admin from "../../Layout/Admin/Admin";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import AdminRoute from "../AdminRoute/AdminRoute";
+import Admin2 from "../../Layout/Admin/Admin2"
 
  const router=createBrowserRouter([
 
@@ -94,6 +95,11 @@ import AdminRoute from "../AdminRoute/AdminRoute";
             {
                 path:'/dashboard/admin',
                 element:<PrivateRoute><Admin></Admin></PrivateRoute>
+               },
+
+               {
+                path:'/dashboard/admin2',
+                element:<PrivateRoute><Admin2></Admin2></PrivateRoute>
                },
             //    {
             //     path:'/addproduct',

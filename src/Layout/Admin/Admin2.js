@@ -11,21 +11,7 @@ export default function Admin() {
   console.log("dashbor adminnnnn", user);
   return (
     <div>
-      <div className="drawer drawer-mobile">
-        <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content ">
-          <Outlet></Outlet>
-          <label
-            htmlFor="my-drawer-2"
-            className="btn btn-primary drawer-button hidden"
-          >
-            Open drawer
-            {/* <Admin></Admin> */}
-          </label>
-        </div>
-        <div className="drawer-side">
-          <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-          {/* buyer */}
+    
 
           <div>
             
@@ -100,7 +86,7 @@ export default function Admin() {
            
           </div>
         </div>
-      </div>
-    </div>
+  
+   
   );
 }

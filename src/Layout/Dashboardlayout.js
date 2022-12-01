@@ -17,16 +17,19 @@ export default function Dashboardlayout() {
   return (
     <div>
       <Navbar></Navbar>
+
+      <Link to="/dashboard/admin2"><div className="btn btn-primary mt-7 lg:hidden">Go to admin section</div></Link>
+
       <div className="drawer drawer-mobile">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content ">
           <Outlet></Outlet>
-          {/* <label
+          <label
             htmlFor="my-drawer-2"
-            className="btn btn-primary drawer-button"
+            className="btn btn-primary drawer-button hidden"
           >
             Open drawer
-          </label> */}
+          </label>
         </div>
         <div className="drawer-side">
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
@@ -74,7 +77,23 @@ export default function Dashboardlayout() {
 
         //  </div>
         //       </div>
-        <Link to="/dashboard/admin"><div className="btn btn-primary mt-7">Go to admin section</div></Link>
+        <Link to="/dashboard/admin"><div className="btn btn-primary mt-7">Go to admin section
+        
+        
+        {/* Problem */}
+
+
+
+
+        
+        {/* Problem */}
+        
+        
+        
+        
+        
+        
+        </div></Link>
               
               :
         
