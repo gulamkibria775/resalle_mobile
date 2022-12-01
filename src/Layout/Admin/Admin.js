@@ -20,6 +20,7 @@ export default function Admin() {
             className="btn btn-primary drawer-button lg:hidden"
           >
             Open drawer
+            <Admin></Admin>
           </label>
         </div>
         <div className="drawer-side">
