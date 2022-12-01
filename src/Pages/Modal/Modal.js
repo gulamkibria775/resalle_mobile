@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import toast from "react-hot-toast";
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from "../../contexts/AuthProvider";
 import useTitle from "../../hooks/useTitle";
 
@@ -8,6 +9,7 @@ export default function Modal({singleitem}) {
     console.log("modal",singleitem)
     const { user } = useContext(AuthContext);
     console.log('user',user)
+    const navigate = useNavigate();
 
     const handleservice = (event) => {
         event.preventDefault();
@@ -66,6 +68,7 @@ export default function Modal({singleitem}) {
             if (data) {
               toast('your order successfull')
               form.reset();
+              navigate('/')
               // window.location.reload(true);
             }
           })
