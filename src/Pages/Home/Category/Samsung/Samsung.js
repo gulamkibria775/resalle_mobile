@@ -11,9 +11,16 @@ export default function Oneplus() {
 
     useEffect(() => {
     
-  fetch("http://localhost:5000/product")
-    .then((res) => res.json())
-    .then( data=>{setalldata(data)});
+  // fetch("http://localhost:5000/product")
+  //   .then((res) => res.json())
+  //   .then( data=>{setalldata(data)});
+
+  axios.get("http://localhost:5000/product")
+  .then(response => response.data)
+  .then((data) => {
+      setEventDetails(data)
+      setIsLoading(false);
+  
     
 }, []);
 
