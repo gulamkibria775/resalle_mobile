@@ -137,10 +137,14 @@ console.log("orderid",orders)
       
       {orders?
       <td >
-       <Link to={`/dashboard/payment/${id}`}> <button  onClick={() => StatusUpdate(id) } className="btn btn-secondary">
+       {/* <Link to={`/dashboard/payment/${id}`}> <button  onClick={() => StatusUpdate(id) } className="btn btn-secondary">
          payment
         </button>
-        </Link>
+        </Link> */}
+        <button  onClick={() => StatusUpdate(id) } className="btn btn-secondary">
+         payment<Link to={`/dashboard/payment/${id}`}></Link>
+        </button>
+       
       </td>: <td>
         <Link to={`/dashboard/payment/${id}`}>
         <button  onClick={() => StatusUpdate(id)} className="btn btn-secondary bg-orange-600 disabled">
