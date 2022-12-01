@@ -23,7 +23,7 @@ export default function Dashboardlayout() {
           <Outlet></Outlet>
           <label
             htmlFor="my-drawer-2"
-            className="btn btn-primary drawer-button lg:hidden"
+            className="btn btn-primary drawer-button hidden"
           >
             Open drawer
           </label>
