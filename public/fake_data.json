@@ -1,0 +1,22 @@
+[
+    {"_id":1,
+       "category":"samsun",
+       "seller":"karim"
+       },
+    {"_id":2,
+    "category":"samsun",
+    "seller":"rahim"},
+    {"_id":3,
+    "category":"oneplus",
+    "seller":"karim"},
+    {"_id":4,
+    "category":"oneplus",
+    "seller":"kibria"},
+    {"_id":5,
+    "category":"walton",
+    "seller":"karim"},
+    {"_id":6,
+    "category":"walton",
+    "seller":"pael"}
+
+]

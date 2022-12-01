@@ -1,0 +1,21 @@
+@media only screen and (min-width: 400px) {
+    .blog{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+  } 
+
+
+@media only screen and (min-width: 600px) {
+    .blog{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .blog{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+  } 
