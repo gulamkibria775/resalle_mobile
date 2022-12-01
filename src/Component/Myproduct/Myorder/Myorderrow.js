@@ -142,13 +142,13 @@ console.log("orderid",orders)
         </button>
         </Link> */}
         <button  onClick={() => StatusUpdate(id) } className="btn btn-secondary">
-         payment<Link to={`/dashboard/payment/${id}`}></Link>
+         Paid<Link to={`/dashboard/payment/${id}`}></Link>
         </button>
        
       </td>: <td>
         <Link to={`/dashboard/payment/${id}`}>
         <button  onClick={() => StatusUpdate(id)} className="btn btn-secondary bg-orange-600 disabled">
-         paid
+         payment
         </button>
         </Link>
       </td>

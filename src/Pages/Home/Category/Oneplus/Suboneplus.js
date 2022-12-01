@@ -34,6 +34,13 @@ export default function Suboneplus({ data, setsingleitem }) {
           >
             Buy Now
           </label>
+          <label
+            onClick={() => setsingleitem(data)}
+            htmlFor="my-modal-3"
+            className="btn btn-primary"
+          >
+        Comment
+          </label>
         </div>
       </div>
     </div>

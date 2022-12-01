@@ -69,6 +69,11 @@ import Admin2 from "../../Layout/Admin/Admin2"
                  {
                    path:"*",
                    element:<Notfound></Notfound>
+                 },
+                 {
+
+                    path:'/comment',
+                    element:<Comment></Comment>
                  }
          
     
