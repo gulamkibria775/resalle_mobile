@@ -6,9 +6,7 @@ import useTitle from "../../../hooks/useTitle";
 
 export default function Myorderrow({
   myorder,
-  // StatusUpdate,
-  //  status,
-//  orders
+  
 }) {
 useTitle("MyorderRow")
 let [orders,setorders]=useState()
