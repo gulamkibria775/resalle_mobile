@@ -38,15 +38,13 @@ export default function Category() {
         
             {cate?.map((order,i) => (
               <Subcategory
-                // key={order._id}
+               
                 key={i}
                 order={order}
                
               ></Subcategory>
             ))}
-            {/* <tr>
-      
-      </tr> */}
+           
          
         
       </div>
