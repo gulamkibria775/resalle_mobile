@@ -128,17 +128,23 @@ console.log("orderid",orders)
 //   console.log("myorder",  myorder);
 //   console.log("myorder_img", seconddata[int].img);
   return (
-    <div>
-      <h1>comment</h1>
-    <ul>
+    <div className="m-7 p-5">
+     
+  { myorder?.comment &&
+
+      <ul>
     
         <img className="w-12" src={myorder.img} alt="" />
       
       <li>{myorder.product_name}</li>
-      {myorder.comment}
+      <li>{myorder.username}</li>
+      <li>{myorder.useremail}</li>
+      
+      Comment{myorder.comment}
       
      
     </ul>
+  }
     </div>
   );
 }

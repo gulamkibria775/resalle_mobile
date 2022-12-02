@@ -116,7 +116,7 @@ useTitle('Myorder')
 
 
   return (
-    <div className='grid grid-col-3'>
+    <div className='grid grid-cols-3'>
       
    
        

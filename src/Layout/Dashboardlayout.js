@@ -105,7 +105,7 @@ export default function Dashboardlayout() {
             <div>
               <ul className="menu p-4 w-80 bg-base-100 text-base-content">
                 <li>
-                  <Link to="/dashboard/myorder">My Order</Link>
+                  <Link to="/dashboard/myorder">Click and see My Order</Link>
                 </li>
               </ul>
             </div>

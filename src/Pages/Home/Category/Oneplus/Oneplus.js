@@ -10,13 +10,7 @@ export default function Oneplus() {
     const [alldata, setalldata] = useState([]);
     const [singleitem, setsingleitem] = useState(null);
 
-//     useEffect(() => {
-    
-//   fetch("http://localhost:5000/product")
-//     .then((res) => res.json())
-//     .then( data=>{setalldata(data)});
-    
-// }, []);
+
 
 
 const {data: users = [],refetch} = useQuery({

@@ -4,7 +4,7 @@ export default function Singleadd({ item }) {
   // console.log("ITEM", item.advertige);
   console.log("ITEM", item);
   return (
-    <div  className="my-1 border m-2">
+    <div  className="my-1 m-2">
       
       {item.advertige && (
         <div className="card  shadow-xl">
