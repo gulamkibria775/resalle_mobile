@@ -93,13 +93,7 @@ console.log("orderid",orders)
         console.log("may",data,data[0].status);
         setorders(data[0].status)
        
-        // if (data.modifiedCount > 0) {
-        //   const remaining = orders.filter((odr) => odr._id !== id);
-        //   const approving = orders.find((odr) => odr._id === id);
-        //   approving.status = "Approved";
-
-        //   const newOrders = [approving, ...remaining];
-        //   setorders(newOrders);
+        
           
         // }
       });
