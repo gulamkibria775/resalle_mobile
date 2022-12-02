@@ -1,119 +1,147 @@
-import React, { useContext } from "react";
-import toast from "react-hot-toast";
-import { Link, useNavigate } from 'react-router-dom';
-import { AuthContext } from "../../../../contexts/AuthProvider";
-import useTitle from "../../../../hooks/useTitle";
+import React, { useContext, useEffect, useState } from 'react'
+import toast from 'react-hot-toast';
+import { AuthContext } from '../../../../contexts/AuthProvider';
+import useTitle from '../../../../hooks/useTitle';
+import Subcomment from './Subcomment';
 
-export default function Modal({singleitem}) {
-  useTitle('modal')
-    console.log("modal",singleitem)
-    const { user } = useContext(AuthContext);
-    console.log('user',user)
-    const navigate = useNavigate();
+export default function Comment() {
+useTitle('Myorder')
+  const { signIn, user, logOut } = useContext(AuthContext);
+  const [orders, setorders] = useState("");
+  const [myorder, setmyorder] = useState([]);
+  const [status,setstatus]=useState()
+  const [seconddata,setseconddata]=useState([])
+  console.log('secondedd data',seconddata)
+//   useEffect(() => {
+//     fetch("http://localhost:5000/comment", {
+//     //   headers: {
+//     //     authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+//     //   },
 
-    const handleservice = (event) => {
-        event.preventDefault();
-        const form = event.target;
-        const phone = form.phone.value;
-        const username=user?.displayName
-        const useremail = user?.email || "unregistered";
-        const category=singleitem.categore;
-        const address = form.address.value;
-        const sellername=singleitem.seller_name;
-        const img=singleitem.img;
-        const price=singleitem.price;
-        const product_name=singleitem.product_name;
-        const status=singleitem.status;
+//     })
+//       .then((res) => {
+//         console.log("problem",res)
+//         if (res.status === 401 || res.status === 403) {
+//           return logOut();
+//         }
+//         return res.json();
+//       })
+//       .then((data) => {
+//         setmyorder(data);
         
-        const id=singleitem._id
-    
+//       });
+//   }, [user?.email, logOut,signIn,status]);
+
+
+  useEffect(() => {
+    fetch("http://localhost:5000/comment", {
         
+    //   headers: {
+    //     authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+    //   },
+
+      
+    })
+      .then((res) => {
+        console.log("problem",res)
+        if (res.status === 401 || res.status === 403) {
+          return logOut();
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setseconddata(data);
+        
+      });
+  }, [user?.email, logOut,signIn,status]);
+
+
+
+
+
+
+  // const StatusUpdate = (id) => {
+  //   setorders(id)
     
-        const order = {
-        //   _id,
-         id,
-           phone,
-           username,
-          useremail ,
-          category,
-           address ,
-           sellername,
-           img,
-           price,
-           product_name,
-      status
-    
+  //   // fetch(`http://localhost:5000/productval/${id}`, {
+  //   //   method: "GET",
+  //   //   headers: {
+  //   //     "content-type": "application/json",
+  //   //     // authorization: `Bearer ${localStorage.getItem('genius-token')}`
+  //   //   },
+     
+  //   // })
+  //   //   .then((res) => res.json())
+  //   //   .then((data) => {
+  //   //     console.log("maa",data,data[0].status);
+  //   //     setorders(data[0].status)
+       
+  //   //     // if (data.modifiedCount > 0) {
+  //   //     //   const remaining = orders.filter((odr) => odr._id !== id);
+  //   //     //   const approving = orders.find((odr) => odr._id === id);
+  //   //     //   approving.status = "Approved";
+
+  //   //     //   const newOrders = [approving, ...remaining];
+  //   //     //   setorders(newOrders);
           
-        };
-    
-        console.log("order", order);
-        // if(phone.length > 10){
-        //     alert('Phone number should be 10 characters or longer')
-        // }
-        // else{
-    
-        // }
-    
-        fetch("http://localhost:5000/buyers", {
-          method: "POST",
-          headers: {
-            "content-type": "application/json",
-            // authorization: `Bearer ${localStorage.getItem('genius-token')}`
-          },
-          body: JSON.stringify(order),
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            console.log(data);
-            if (data) {
-              toast('your order successfull')
-              form.reset();
-              navigate('/')
-              // window.location.reload(true);
-            }
-          })
-          .catch((er) => console.error(er));
-      };
+  //   //     // }
+  //   //   });
 
 
+  //   setstatus(!status)
+  //   fetch(`http://localhost:5000/orderstatus/${id}`, {
+  //     method: "PUT",
+  //     headers: {
+  //       "content-type": "application/json",
+  //       // authorization: `Bearer ${localStorage.getItem('genius-token')}`
+  //     },
+  //     body: JSON.stringify({ status: status}),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => {
+        
+        
+  //       toast("order successfull")
+  //       // if (data.modifiedCount > 0) {
+  //       //   const remaining = orders.filter((odr) => odr._id !== id);
+  //       //   const approving = orders.find((odr) => odr._id === id);
+  //       //   approving.status = "Approved";
+
+  //       //   const newOrders = [approving, ...remaining];
+  //       //   setorders(newOrders);
+          
+  //       // }
+  //     });
+  // };
 
 
-
-    
   return (
-    <>
-      <input type="checkbox" id="my-modal-3" className="modal-toggle" />
-      <div className="modal">
-        <div className="modal-box relative">
-          <label
-            htmlFor="my-modal-3"
-            className="btn btn-sm btn-circle absolute right-2 top-2"
-          >
-            ✕
-          </label>
+    <div className='grid grid-col-3'>
+      
+   
+       
+        
+            {seconddata?.map((myorder,index) => (
+              <Subcomment
+                key={myorder._id}
+                myorder={myorder}
+                
+                // StatusUpdate={StatusUpdate}
+                // seconddata={seconddata}
+                index={index}
+            //   orders={orders}
+                // status={status}
+               
+              ></Subcomment>
 
-          {/* {
-            user && <div><p>Name:  { user.displayName}</p> <p> Email:  {user.email}</p></div>
-            
-          }
-          <h3 className="text-lg font-bold">
-          category: {singleitem.categore}
-          </h3>
-          <p className="py-4 font-bold">
-           seller_name:{singleitem.seller_name}
-          </p> */}
+
+            ))}
+           
+
+
          
-          <form  onSubmit={handleservice}>
-          {/* <input type="text" placeholder="Type here" className="input w-full max-w-xs" />
-          <input type="text" placeholder="Type here" className="input w-full max-w-xs" /> */}
-          {/* <input name="phone" type="text" placeholder="Phone number" className="input w-full  my-3" required /> */}
-          <br />
-          <textarea name="address" className="textarea textarea-primary w-full  my-3" placeholder="take your comment" required></textarea>
-          <br />
-          <input className="btn btin-primary w-full " type="submit" value="Submit" />
-          </form>
-        </div>
+        
       </div>
-    </>
-  );
+  
+  )
 }

@@ -19,6 +19,7 @@ export default function Modal({singleitem}) {
         const useremail = user?.email || "unregistered";
         const category=singleitem.categore;
         const address = form.address.value;
+        const comment = form.comment.value;
         const sellername=singleitem.seller_name;
         const img=singleitem.img;
         const price=singleitem.price;
@@ -41,7 +42,8 @@ export default function Modal({singleitem}) {
            img,
            price,
            product_name,
-      status
+      status,
+      comment
     
           
         };
@@ -109,6 +111,8 @@ export default function Modal({singleitem}) {
           <input name="phone" type="text" placeholder="Phone number" className="input w-full  my-3" required />
           <br />
           <textarea name="address" className="textarea textarea-primary w-full  my-3" placeholder="Address" required></textarea>
+          <br />
+          <textarea name="comment" className="textarea textarea-primary w-full  my-3" placeholder="please your comment"></textarea>
           <br />
           <input className="btn btin-primary w-full " type="submit" value="Submit" />
           </form>

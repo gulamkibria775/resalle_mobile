@@ -22,6 +22,7 @@ import Admin from "../../Layout/Admin/Admin";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import AdminRoute from "../AdminRoute/AdminRoute";
 import Admin2 from "../../Layout/Admin/Admin2"
+import Comment from "../../Pages/Home/Category/Oneplus/Comment";
 
  const router=createBrowserRouter([
 
@@ -125,6 +126,10 @@ import Admin2 from "../../Layout/Admin/Admin2"
             {
                 path:'/dashboard/buyer',
                 element:<Allbuyer></Allbuyer>
+            },
+            {
+                       path:'/dashboard/comment',
+                       element:<Comment></Comment>
             },
             {
                 path:'/dashboard/myorder',

@@ -51,6 +51,7 @@ export default function Admin() {
                       <li>
                         <h1 className="text-3xl m-1 ">Buyer Section </h1>
                         <Link to="/dashboard/myorder">My Order</Link>
+                        <Link to="/dashboard/comment">Buyer Comment</Link>
                       </li>
                     </ul>
                   </div>
