@@ -6,7 +6,7 @@ import useTitle from '../../hooks/useTitle';
 import useToken from '../../hooks/useToken';
 
 
-import {getAuth, GoogleAuthProvider} from 'firebase/auth';
+import { GoogleAuthProvider} from 'firebase/auth';
 
 
 
@@ -24,7 +24,7 @@ const Login = () => {
 
     const googleProvider = new GoogleAuthProvider()
     
-    const auth=getAuth()
+    // const auth=getAuth()
 
  
     // console.log('sing',singing)

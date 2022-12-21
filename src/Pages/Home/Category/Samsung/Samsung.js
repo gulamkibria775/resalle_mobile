@@ -1,12 +1,12 @@
 import React from "react";
-// import { useEffect, useState } from "react";
+import {  useState } from "react";
 import useTitle from "../../../../hooks/useTitle";
 import Modal from "../../../Modal/Modal";
 import Suboneplus from "../Oneplus/Suboneplus";
 import axios from "axios";
 
 export default function Oneplus() {
-  const [alldata, setalldata] = useState([]);
+  // const [alldata, setalldata] = useState([]);
   const [singleitem, setsingleitem] = useState(null);
   useTitle("samsung");
 

@@ -6,7 +6,7 @@ import Buyerrow from "./Buyerrow";
 import { useQuery } from "@tanstack/react-query";
 export default function Allbuyer() {
   useTitle("my_product");
-  const { signIn, user, logOut } = useContext(AuthContext);
+  const {  user } = useContext(AuthContext);
   const [orders, setOrders] = useState([]);
  
   console.log("my praduct data", orders, user?.email);

@@ -1,16 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
 import toast from "react-hot-toast";
-import { AuthContext } from "../../../contexts/AuthProvider";
+// import { AuthContext } from "../../../contexts/AuthProvider";
 import useTitle from "../../../hooks/useTitle";
 import Userrow from "./Userrow";
 import { useQuery } from "@tanstack/react-query";
 
 export default function Alluser() {
   useTitle("my_product");
-  const { signIn, user, logOut } = useContext(AuthContext);
+  // const { signIn, user, logOut } = useContext(AuthContext);
   const [orders, setOrders] = useState([]);
-  const [status, setstatus] = useState();
-  const [stata, setstata] = useState();
+ 
 
   
  
@@ -91,10 +90,9 @@ export default function Alluser() {
                 key={order._id}
                 order={order}
                 handleDelete={handleDelete}
-                // StatusUpdate={StatusUpdate}
+               
                 handleStatusUpdate={handleStatusUpdate}
-                // status={status}
-                // stata={stata}
+              
               ></Userrow>
             ))}
            
