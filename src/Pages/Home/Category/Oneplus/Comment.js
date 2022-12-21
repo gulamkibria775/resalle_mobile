@@ -12,25 +12,7 @@ export default function Comment() {
   const [status, setstatus] = useState();
   const [seconddata, setseconddata] = useState([]);
   console.log("secondedd data", seconddata);
-  //   useEffect(() => {
-  //     fetch("https://server-site-gulamkibria775.vercel.app/comment", {
-  //     //   headers: {
-  //     //     authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-  //     //   },
-
-  //     })
-  //       .then((res) => {
-  //         console.log("problem",res)
-  //         if (res.status === 401 || res.status === 403) {
-  //           return logOut();
-  //         }
-  //         return res.json();
-  //       })
-  //       .then((data) => {
-  //         setmyorder(data);
-
-  //       });
-  //   }, [user?.email, logOut,signIn,status]);
+ 
 
   useEffect(() => {
     fetch("https://server-site-gulamkibria775.vercel.app/comment", {
@@ -50,57 +32,7 @@ export default function Comment() {
       });
   }, [user?.email, logOut, signIn, status]);
 
-  // const StatusUpdate = (id) => {
-  //   setorders(id)
-
-  //   // fetch(`https://server-site-gulamkibria775.vercel.app/productval/${id}`, {
-  //   //   method: "GET",
-  //   //   headers: {
-  //   //     "content-type": "application/json",
-  //   //     // authorization: `Bearer ${localStorage.getItem('genius-token')}`
-  //   //   },
-
-  //   // })
-  //   //   .then((res) => res.json())
-  //   //   .then((data) => {
-  //   //     console.log("maa",data,data[0].status);
-  //   //     setorders(data[0].status)
-
-  //   //     // if (data.modifiedCount > 0) {
-  //   //     //   const remaining = orders.filter((odr) => odr._id !== id);
-  //   //     //   const approving = orders.find((odr) => odr._id === id);
-  //   //     //   approving.status = "Approved";
-
-  //   //     //   const newOrders = [approving, ...remaining];
-  //   //     //   setorders(newOrders);
-
-  //   //     // }
-  //   //   });
-
-  //   setstatus(!status)
-  //   fetch(`https://server-site-gulamkibria775.vercel.app/orderstatus/${id}`, {
-  //     method: "PUT",
-  //     headers: {
-  //       "content-type": "application/json",
-  //       // authorization: `Bearer ${localStorage.getItem('genius-token')}`
-  //     },
-  //     body: JSON.stringify({ status: status}),
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => {
-
-  //       toast("order successfull")
-  //       // if (data.modifiedCount > 0) {
-  //       //   const remaining = orders.filter((odr) => odr._id !== id);
-  //       //   const approving = orders.find((odr) => odr._id === id);
-  //       //   approving.status = "Approved";
-
-  //       //   const newOrders = [approving, ...remaining];
-  //       //   setorders(newOrders);
-
-  //       // }
-  //     });
-  // };
+ 
 
   return (
     <div className="grid grid-cols-3">
@@ -108,11 +40,10 @@ export default function Comment() {
         <Subcomment
           key={myorder._id}
           myorder={myorder}
-          // StatusUpdate={StatusUpdate}
-          // seconddata={seconddata}
+          
+        
           index={index}
-          //   orders={orders}
-          // status={status}
+         
         ></Subcomment>
       ))}
     </div>

@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 // import { Link } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthProvider";
 import Subcategory from "./Subcategory";
-// import Subcategory from './Subcategory';
+
 
 export default function Category() {
   

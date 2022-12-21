@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import useTitle from "../../../../hooks/useTitle";
 import Modal from "../../../Modal/Modal";
 import Suboneplus from "../Oneplus/Suboneplus";
@@ -10,19 +10,6 @@ export default function Oneplus() {
   const [singleitem, setsingleitem] = useState(null);
   useTitle("samsung");
 
-  //     useEffect(() => {
-
-  //   // fetch("https://server-site-gulamkibria775.vercel.app/product")
-  //   //   .then((res) => res.json())
-  //   //   .then( data=>{setalldata(data)});
-
-  //   axios.get("https://server-site-gulamkibria775.vercel.app/product")
-  //   .then(response => response.data)
-  //   .then((data) => {
-  //       setEventDetails(data);
-  //       setIsLoading(false);
-
-  // }, []);
 
   // Axois use
 

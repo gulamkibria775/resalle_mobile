@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import toast from "react-hot-toast";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export default function Suboneplus({ data, setsingleitem }) {
   const {
@@ -35,12 +35,7 @@ export default function Suboneplus({ data, setsingleitem }) {
 
         toast("your comment successfully send");
         setComment(true);
-        // const remaining = orders.filter((odr) => odr._id !== id);
-        // const approving = orders.find((odr) => odr._id === id);
-        // approving.status = "Approved";
-
-        // const newOrders = [approving, ...remaining];
-        // setOrders(newOrders);
+        
       });
   };
 
@@ -75,10 +70,7 @@ export default function Suboneplus({ data, setsingleitem }) {
           >
             Comment
           </label>
-          {/* <Link
-            to= "/comment" >
-        Comment
-          </Link> */}
+        
         </div>
       </div>
     </div>
