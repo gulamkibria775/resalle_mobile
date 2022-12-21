@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 // import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import { AuthContext } from "../../contexts/AuthProvider";
 // import useTitle from "../../../../hook/useTitle";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import {  useLocation, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import useTitle from "../../hooks/useTitle";
 
@@ -29,8 +29,7 @@ export default function Selleraddproduct() {
     const img = form.img.value;
     const description = form.description.value;
 
-    // const description = form.description.value;
-    // console.log('option',slected)
+
 
     const seller_information = {
       //  "id": _id,
@@ -52,13 +51,7 @@ export default function Selleraddproduct() {
       advertige: "",
     };
 
-    // console.log("seller_information",seller_information);
-    // if(phone.length > 10){
-    //     alert('Phone number should be 10 characters or longer')
-    // }
-    // else{
-
-    // }
+   
 
     fetch("https://server-site-gulamkibria775.vercel.app/addproductbyseller", {
       method: "POST",

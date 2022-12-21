@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import toast from "react-hot-toast";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthProvider";
 import useTitle from "../../hooks/useTitle";
 
@@ -44,13 +44,6 @@ export default function Modal({ singleitem }) {
       comment,
     };
 
-    console.log("order", order);
-    // if(phone.length > 10){
-    //     alert('Phone number should be 10 characters or longer')
-    // }
-    // else{
-
-    // }
 
     fetch("https://server-site-gulamkibria775.vercel.app/buyers", {
       method: "POST",

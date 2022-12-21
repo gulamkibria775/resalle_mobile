@@ -16,14 +16,7 @@ const Login = () => {
     console.log('ueser login',user)
     const { register, formState: { errors }, handleSubmit } = useForm();
     
-    // const singing = useContext(AuthContext);
-
-
-
-
-
-// import app from '../../../../firebase/firebase.config';
-// import Header from '../../../Shared/Header/Header';
+    
 
 
 
