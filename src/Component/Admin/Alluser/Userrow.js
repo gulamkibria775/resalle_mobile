@@ -2,7 +2,6 @@ import React from "react";
 import toast from "react-hot-toast";
 
 export default function Userrow({
-
   order,
   handleDelete,
   // StatusUpdate,
@@ -10,23 +9,20 @@ export default function Userrow({
   // status,
   // stata,
 }) {
-  const { _id,name,email} = order;
-  console.log('or')
+  const { _id, name, email } = order;
+  console.log("or");
 
-const handleadmin =id=>{
-  fetch(`http://localhost:5000/users/admin/${id}`,{
-    method:'PUT'
-  })
-  .then(res =>res.json())
-  .then(data=>{
-    console.log("dattta",data)
-    toast.success("make admin suceesfully")
-    
-  })
-}
+  const handleadmin = (id) => {
+    fetch(`https://server-site-gulamkibria775.vercel.app/users/admin/${id}`, {
+      method: "PUT",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("dattta", data);
+        toast.success("make admin suceesfully");
+      });
+  };
 
-
-  
   return (
     <tr>
       <th>
@@ -37,22 +33,18 @@ const handleadmin =id=>{
         </label>
       </th>
 
+      <td>{email}</td>
+      <td>{name}</td>
       <td>
-       
-          {email}
-       
+        {order?.role !== "admin" && (
+          <button
+            onClick={() => handleStatusUpdate(_id)}
+            className="btn btn-Primary"
+          >
+            Admin
+          </button>
+        )}
       </td>
-      <td>
-       
-        {name}
-       
-      </td>
-      <td>
-        { order?.role !== 'admin' &&
-          <button onClick={()=>handleStatusUpdate(_id)} className="btn btn-Primary">Admin</button>
-        }
-      </td>
-     
     </tr>
   );
 }

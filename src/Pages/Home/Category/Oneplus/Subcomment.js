@@ -8,143 +8,128 @@ export default function Myorderrow({
   myorder,
   // StatusUpdate,
   //  status,
-//  orders
+  //  orders
 }) {
-// useTitle("MyorderRow")
-let [orders,setorders]=useState()
-let [sta,setsta]=useState(true)
-// let [paid,setPaid]=useState(true)
+  // useTitle("MyorderRow")
+  let [orders, setorders] = useState();
+  let [sta, setsta] = useState(true);
+  // let [paid,setPaid]=useState(true)
 
-const id = myorder.id;
-console.log("iddd",id)
-console.log("orderid",orders)
+  const id = myorder.id;
+  console.log("iddd", id);
+  console.log("orderid", orders);
 
-// //     const [ val,setval]=useState(false)
+  // //     const [ val,setval]=useState(false)
 
-// // // try
-// //   const StatusUpdate = (id) => {
-// //     setorders(id)
-    
-// //     fetch(`http://localhost:5000/productval/${id}`, {
-// //       method: "GET",
-// //       headers: {
-// //         "content-type": "application/json",
-// //         // authorization: `Bearer ${localStorage.getItem('genius-token')}`
-// //       },
-     
-// //     })
-// //       .then((res) => res.json())
-// //       .then((data) => {
-// //         console.log("maayy",data,data[0].status);
-//         // setorders(data[0].status)
-       
-//         // if (data.modifiedCount > 0) {
-//         //   const remaining = orders.filter((odr) =>odr._id !== id);
-//         //   const approving = orders.find((odr) => odr._id === id);
-//         //   approving.status = "Approved";
+  // // // try
+  // //   const StatusUpdate = (id) => {
+  // //     setorders(id)
 
-//         //   const newOrders = [approving, ...remaining];
-//         //   setorders(newOrders);
-          
-//         // }
-//       // });
+  // //     fetch(`https://server-site-gulamkibria775.vercel.app/productval/${id}`, {
+  // //       method: "GET",
+  // //       headers: {
+  // //         "content-type": "application/json",
+  // //         // authorization: `Bearer ${localStorage.getItem('genius-token')}`
+  // //       },
 
+  // //     })
+  // //       .then((res) => res.json())
+  // //       .then((data) => {
+  // //         console.log("maayy",data,data[0].status);
+  //         // setorders(data[0].status)
 
-//     setsta(!sta)
-//     fetch(`http://localhost:5000/orderstatus/${id}`, {
-//       method: "PUT",
-//       headers: {
-//         "content-type": "application/json",
-//         // authorization: `Bearer ${localStorage.getItem('genius-token')}`
-//       },
-//       body: JSON.stringify({ status: sta}),
-//     })
-//       .then((res) => res.json())
-//       .then((data) => {
-        
-        
-//         toast("order successfull")
-//         // if (data.modifiedCount > 0) {
-//         //   const remaining = orders.filter((odr) => odr._id !== id);
-//         //   const approving = orders.find((odr) => odr._id === id);
-//         //   approving.status = "Approved";
+  //         // if (data.modifiedCount > 0) {
+  //         //   const remaining = orders.filter((odr) =>odr._id !== id);
+  //         //   const approving = orders.find((odr) => odr._id === id);
+  //         //   approving.status = "Approved";
 
-//         //   const newOrders = [approving, ...remaining];
-//         //   setorders(newOrders);
-          
-//         // }
-//       });
-//   };
-// // tryend
+  //         //   const newOrders = [approving, ...remaining];
+  //         //   setorders(newOrders);
 
+  //         // }
+  //       // });
 
+  //     setsta(!sta)
+  //     fetch(`https://server-site-gulamkibria775.vercel.app/orderstatus/${id}`, {
+  //       method: "PUT",
+  //       headers: {
+  //         "content-type": "application/json",
+  //         // authorization: `Bearer ${localStorage.getItem('genius-token')}`
+  //       },
+  //       body: JSON.stringify({ status: sta}),
+  //     })
+  //       .then((res) => res.json())
+  //       .then((data) => {
 
+  //         toast("order successfull")
+  //         // if (data.modifiedCount > 0) {
+  //         //   const remaining = orders.filter((odr) => odr._id !== id);
+  //         //   const approving = orders.find((odr) => odr._id === id);
+  //         //   approving.status = "Approved";
 
+  //         //   const newOrders = [approving, ...remaining];
+  //         //   setorders(newOrders);
 
+  //         // }
+  //       });
+  //   };
+  // // tryend
 
-//     fetch(`http://localhost:5000/productval/${id}`, {
-//       method: "GET",
-//       headers: {
-//         "content-type": "application/json",
-//         // authorization: `Bearer ${localStorage.getItem('genius-token')}`
-//       },
-     
-//     })
-//       .then((res) => res.json())
-//       .then((data) => {
-//         console.log("may",data,data[0].status);
-//         setorders(data[0].status)
-       
-//         // if (data.modifiedCount > 0) {
-//         //   const remaining = orders.filter((odr) => odr._id !== id);
-//         //   const approving = orders.find((odr) => odr._id === id);
-//         //   approving.status = "Approved";
+  //     fetch(`https://server-site-gulamkibria775.vercel.app/productval/${id}`, {
+  //       method: "GET",
+  //       headers: {
+  //         "content-type": "application/json",
+  //         // authorization: `Bearer ${localStorage.getItem('genius-token')}`
+  //       },
 
-//         //   const newOrders = [approving, ...remaining];
-//         //   setorders(newOrders);
-          
-//         // }
-//       });
-    
+  //     })
+  //       .then((res) => res.json())
+  //       .then((data) => {
+  //         console.log("may",data,data[0].status);
+  //         setorders(data[0].status)
 
-//     // 
-//     // const myfun=()=>{
-//     //     setval(!val)
-//     //     console.log("hi")
-       
-//     // }
+  //         // if (data.modifiedCount > 0) {
+  //         //   const remaining = orders.filter((odr) => odr._id !== id);
+  //         //   const approving = orders.find((odr) => odr._id === id);
+  //         //   approving.status = "Approved";
 
-//     console.log("fun",orders)
-    // console.log("fun1",myorder.status)
-    // console.log("valo",myorder.status)
-//   const myodid = myorder.id;
-// //   const myproid=seconddata[index]._id
-//   console.log("myodid", myodid);
-//   console.log("vall", status);
+  //         //   const newOrders = [approving, ...remaining];
+  //         //   setorders(newOrders);
 
-//   const result = seconddata.filter((word) => word.length > 6);
-  
-//   const int = index;
-//   console.log("myorder",  myorder);
-//   console.log("myorder_img", seconddata[int].img);
+  //         // }
+  //       });
+
+  //     //
+  //     // const myfun=()=>{
+  //     //     setval(!val)
+  //     //     console.log("hi")
+
+  //     // }
+
+  //     console.log("fun",orders)
+  // console.log("fun1",myorder.status)
+  // console.log("valo",myorder.status)
+  //   const myodid = myorder.id;
+  // //   const myproid=seconddata[index]._id
+  //   console.log("myodid", myodid);
+  //   console.log("vall", status);
+
+  //   const result = seconddata.filter((word) => word.length > 6);
+
+  //   const int = index;
+  //   console.log("myorder",  myorder);
+  //   console.log("myorder_img", seconddata[int].img);
   return (
     <div className="m-7 p-5">
-     
-  { myorder?.comment &&
-
-      <ul>
-    
-        <img className="w-12" src={myorder.img} alt="" />
-      
-      <li>{myorder.product_name}</li>
-      <li>{myorder.username}</li>
-      <li>{myorder.useremail}</li>
-      
-      Comment{myorder.comment}
-      
-     
-    </ul>
-  }
+      {myorder?.comment && (
+        <ul>
+          <img className="w-12" src={myorder.img} alt="" />
+          <li>{myorder.product_name}</li>
+          <li>{myorder.username}</li>
+          <li>{myorder.useremail}</li>
+          Comment{myorder.comment}
+        </ul>
+      )}
     </div>
   );
 }

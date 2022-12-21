@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 
 const useToken = (email) => {
-
-  console.log('ami nai',email)
+  console.log("ami nai", email);
   const [token, setToken] = useState("");
-  console.log('ami nai2',email[0])
+  console.log("ami nai2", email[0]);
   useEffect(() => {
     if (email) {
-      fetch(`http://localhost:5000/jwt?email=${email[0]}&status=${email[1]}`)
+      fetch(
+        `https://server-site-gulamkibria775.vercel.app/jwt?email=${email[0]}&status=${email[1]}`
+      )
         .then((res) => res.json())
         .then((data) => {
           if (data.accessToken) {

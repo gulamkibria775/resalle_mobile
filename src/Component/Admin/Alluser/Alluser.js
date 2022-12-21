@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 import { AuthContext } from "../../../contexts/AuthProvider";
 import useTitle from "../../../hooks/useTitle";
 import Userrow from "./Userrow";
-import { useQuery } from '@tanstack/react-query';
+import { useQuery } from "@tanstack/react-query";
 
 export default function Alluser() {
   useTitle("my_product");
@@ -15,24 +15,20 @@ export default function Alluser() {
   //   console.log("my praduct data1",stata);
   console.log("my praduct data1", orders);
   console.log("my praduct data2", status);
-  
 
-
-
-
-
-  const {data: users = [],refetch} = useQuery({
-    queryKey: ['users'],
-    queryFn: async() =>{
-        const res = await fetch('http://localhost:5000/newuser');
-        const data = await res.json();
-        return data;
-    }
-});
-
+  const { data: users = [], refetch } = useQuery({
+    queryKey: ["users"],
+    queryFn: async () => {
+      const res = await fetch(
+        "https://server-site-gulamkibria775.vercel.app/newuser"
+      );
+      const data = await res.json();
+      return data;
+    },
+  });
 
   // useEffect(() => {
-  //   fetch("http://localhost:5000/newuser", {
+  //   fetch("https://server-site-gulamkibria775.vercel.app/newuser", {
   //     // headers: {
   //     //   authorization: `Bearer ${localStorage.getItem("genius-token")}`,
   //     // },
@@ -54,7 +50,7 @@ export default function Alluser() {
       "Are you sure, you want to cancel this status"
     );
     if (proceed) {
-      fetch(`http://localhost:5000/newuser/${id}`, {
+      fetch(`https://server-site-gulamkibria775.vercel.app/newuser/${id}`, {
         method: "DELETE",
         // headers: {
         //     authorization: `Bearer ${localStorage.getItem('genius-token')}`
@@ -72,19 +68,18 @@ export default function Alluser() {
   };
 
   const handleStatusUpdate = (id) => {
-    fetch(`http://localhost:5000/users/admin/${id}`, {
+    fetch(`https://server-site-gulamkibria775.vercel.app/users/admin/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
-        authorization: `Bearer ${localStorage.getItem('accessToken')}`
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },
       // body: JSON.stringify({ status: status }),
     })
       .then((res) => res.json())
       .then((data) => {
-        
         if (data.modifiedCount > 0) {
-          toast(" admin successfully")
+          toast(" admin successfully");
           refetch();
           // const remaining = orders.filter((odr) => odr._id !== id);
           // const approving = orders.find((odr) => odr._id === id);
@@ -92,7 +87,7 @@ export default function Alluser() {
 
           // const newOrders = [approving, ...remaining];
           // setOrders(newOrders);
-          
+
           // window.location.reload()
         }
       });
@@ -101,7 +96,7 @@ export default function Alluser() {
   // const StatusUpdate = (id) => {
   //   setstata(!stata)
 
-  //   fetch(`http://localhost:5000/orderstatus/${id}`, {
+  //   fetch(`https://server-site-gulamkibria775.vercel.app/orderstatus/${id}`, {
   //     method: "PUT",
   //     headers: {
   //       "content-type": "application/json",

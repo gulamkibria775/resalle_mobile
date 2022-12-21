@@ -6,26 +6,26 @@ export default function Userrow({
   handleDelete,
   StatusUpdate,
   handleStatusUpdate,
-  // status,
-  // stata,
+ 
 }) {
-  const { _id,name,email} = order;
-  console.log('or' ,order)
+  const { _id, name, email } = order;
+  console.log("or", order);
 
+  const handleadmin = (id) => {
+    fetch(
+      `https://server-site-gulamkibria775.vercel.app/newbuyer/admin/${id}`,
+      {
+        method: "PUT",
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("dattta", data);
 
-  const handleadmin =id=>{
-    fetch(`http://localhost:5000/newbuyer/admin/${id}`,{
-      method:'PUT'
-    })
-    .then(res =>res.json())
-    .then(data=>{
-      console.log("dattta",data)
-      
-      toast.success("make admin suceesfully")
-      
-    })
-  }
-  
+        toast.success("make admin suceesfully");
+      });
+  };
+
   return (
     <tr>
       <th>
@@ -36,22 +36,18 @@ export default function Userrow({
         </label>
       </th>
 
+      <td>{email}</td>
+      <td>{name}</td>
       <td>
-       
-          {email}
-       
+        {order?.role !== "admin" && (
+          <button
+            onClick={() => handleStatusUpdate(_id)}
+            className="btn btn-Primary"
+          >
+            Admin
+          </button>
+        )}
       </td>
-      <td>
-       
-        {name}
-       
-      </td>
-      <td>
-      { order?.role !== 'admin' &&
-          <button onClick={()=>handleStatusUpdate(_id)} className="btn btn-Primary">Admin</button>
-        }
-      </td>
-     
     </tr>
   );
 }
