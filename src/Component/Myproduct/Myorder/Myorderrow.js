@@ -30,17 +30,7 @@ export default function Myorderrow({ myorder }) {
       .then((res) => res.json())
       .then((data) => {
         console.log("maayy", data, data[0].status);
-        // setorders(data[0].status)
-
-        // if (data.modifiedCount > 0) {
-        //   const remaining = orders.filter((odr) =>odr._id !== id);
-        //   const approving = orders.find((odr) => odr._id === id);
-        //   approving.status = "Approved";
-
-        //   const newOrders = [approving, ...remaining];
-        //   setorders(newOrders);
-
-        // }
+       
       });
 
     setsta(!sta);
@@ -55,15 +45,7 @@ export default function Myorderrow({ myorder }) {
       .then((res) => res.json())
       .then((data) => {
         toast("order successfull");
-        // if (data.modifiedCount > 0) {
-        //   const remaining = orders.filter((odr) => odr._id !== id);
-        //   const approving = orders.find((odr) => odr._id === id);
-        //   approving.status = "Approved";
-
-        //   const newOrders = [approving, ...remaining];
-        //   setorders(newOrders);
-
-        // }
+       
       });
   };
   // tryend
@@ -83,26 +65,10 @@ export default function Myorderrow({ myorder }) {
       // }
     });
 
-  //
-  // const myfun=()=>{
-  //     setval(!val)
-  //     console.log("hi")
-
-  // }
+ 
 
   console.log("fun", orders);
-  // console.log("fun1",myorder.status)
-  // console.log("valo",myorder.status)
-  //   const myodid = myorder.id;
-  // //   const myproid=seconddata[index]._id
-  //   console.log("myodid", myodid);
-  //   console.log("vall", status);
-
-  //   const result = seconddata.filter((word) => word.length > 6);
-
-  //   const int = index;
-  //   console.log("myorder",  myorder);
-  //   console.log("myorder_img", seconddata[int].img);
+ 
   return (
     <tr>
       <td>

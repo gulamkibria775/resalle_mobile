@@ -50,57 +50,6 @@ export default function Myorder() {
       });
   }, [user?.email, logOut, signIn, status]);
 
-  // const StatusUpdate = (id) => {
-  //   setorders(id)
-
-  //   // fetch(`https://server-site-gulamkibria775.vercel.app/productval/${id}`, {
-  //   //   method: "GET",
-  //   //   headers: {
-  //   //     "content-type": "application/json",
-  //   //     // authorization: `Bearer ${localStorage.getItem('genius-token')}`
-  //   //   },
-
-  //   // })
-  //   //   .then((res) => res.json())
-  //   //   .then((data) => {
-  //   //     console.log("maa",data,data[0].status);
-  //   //     setorders(data[0].status)
-
-  //   //     // if (data.modifiedCount > 0) {
-  //   //     //   const remaining = orders.filter((odr) => odr._id !== id);
-  //   //     //   const approving = orders.find((odr) => odr._id === id);
-  //   //     //   approving.status = "Approved";
-
-  //   //     //   const newOrders = [approving, ...remaining];
-  //   //     //   setorders(newOrders);
-
-  //   //     // }
-  //   //   });
-
-  //   setstatus(!status)
-  //   fetch(`https://server-site-gulamkibria775.vercel.app/orderstatus/${id}`, {
-  //     method: "PUT",
-  //     headers: {
-  //       "content-type": "application/json",
-  //       // authorization: `Bearer ${localStorage.getItem('genius-token')}`
-  //     },
-  //     body: JSON.stringify({ status: status}),
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => {
-
-  //       toast("order successfull")
-  //       // if (data.modifiedCount > 0) {
-  //       //   const remaining = orders.filter((odr) => odr._id !== id);
-  //       //   const approving = orders.find((odr) => odr._id === id);
-  //       //   approving.status = "Approved";
-
-  //       //   const newOrders = [approving, ...remaining];
-  //       //   setorders(newOrders);
-
-  //       // }
-  //     });
-  // };
 
   return (
     <div>
