@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthProvider";
 import useAdmin from "../../hooks/useAdmin";
-import Navbar from "../../Pages/Shared/Navbar/Navbar";
+// import Navbar from "../../Pages/Shared/Navbar/Navbar";
 
 export default function Admin() {
   const { user } = useContext(AuthContext);
@@ -58,31 +58,7 @@ export default function Admin() {
                 </div>
               </div>
            
-              {/* <div>
-               
-                  <div>
-                    <ul className="menu p-4 w-80 bg-base-100 text-base-content">
-                      <li>
-                        <Link to="/dashboard/myorder">My Order</Link>
-                      </li>
-                    </ul>
-                  </div>
-               
-                  <div>
-                    <ul className="menu p-4 w-80 bg-base-100 text-base-content">
-                      <li>
-                        <Link to="/dashboard/addproduct">Add Product</Link>
-                      </li>
-                      <li>
-                        <Link to="/dashboard/myproduct">My Product</Link>
-                      </li>
-                      <li>
-                        <Link to="/dashboard/mybuyer">My Buyers</Link>
-                      </li>
-                    </ul>
-                  </div>
-               
-              </div> */}
+              
            
           </div>
         </div>

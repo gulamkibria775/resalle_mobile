@@ -41,52 +41,11 @@ export default function Dashboardlayout() {
 
             isAdmin ?
 
-        //     <div>
-        //      <ul className="border m-5">
-              
-        //        <h1 className="text-3xl m-1">Admin section</h1>
-        //        <li><Link to="/dashboard/user" ><button className="btn btn-primary mb">All Users</button></Link></li>
-        //        <li><Link to="/dashboard/buyer"><button className="btn btn-danger">All Buyers</button></Link></li>
-        //       </ul> 
-        //       <div>
-        
-        //     <div>
-        //       <ul className="menu p-4 w-80 bg-base-100 text-base-content border">
-        //         <li>
-        //           <h1 className="text-3xl m-1 ">Buyer Section </h1>
-        //           <Link to="/dashboard/myorder">My Order</Link>
-        //         </li>
-        //       </ul>
-        //     </div>
-          
-        //     <div>
-        //       <ul className="menu p-4 w-80 bg-base-100 text-base-content border">
-        //         <h1 className="text-3xl m-1 ">Seller Section</h1>
-        //         <li>
-        //           <Link to='/dashboard/addproduct'>Add Product</Link>
-        //         </li>
-        //         <li>
-        //           <Link to='/dashboard/myproduct'>My Product</Link>
-        //         </li>
-        //         <li>
-        //           <Link to="/dashboard/mybuyer">My Buyers</Link>
-        //         </li>
-        //       </ul>
-        //     </div>
-        
-
-        //  </div>
-        //       </div>
+       
         <Link to="/dashboard/admin"><div className="btn btn-primary mt-7">Go to admin section
         
         
-        {/* Problem */}
-
-
-
-
-        
-        {/* Problem */}
+    
         
         
         
