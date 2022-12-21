@@ -18,26 +18,6 @@ export default function Suboneplus({ data, setsingleitem }) {
 
   const [commet, setComment] = useState(false);
 
-  // const setsinglecomment = (data) => {
-  //   // setstata(!stata)
-
-  //   fetch("https://server-site-gulamkibria775.vercel.app/comment", {
-  //     method: "POST",
-  //     headers: {
-  //       "content-type": "application/json",
-  //       // authorization: `Bearer ${localStorage.getItem('accessToken')}`
-  //     },
-  //     body: JSON.stringify(data),
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       // console.log(data);
-
-  //       toast("your comment successfully send");
-  //       setComment(true);
-        
-  //     });
-  // };
 
   return (
     <div className="card w-96 shadow-xl m-3 mt-7">
