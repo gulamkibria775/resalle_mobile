@@ -11,10 +11,9 @@ export default function Alluser() {
   const [orders, setOrders] = useState([]);
   const [status, setstatus] = useState();
   const [stata, setstata] = useState();
-  console.log("my praduct data", orders, user?.email);
-  //   console.log("my praduct data1",stata);
-  console.log("my praduct data1", orders);
-  console.log("my praduct data2", status);
+
+  
+ 
 
   const { data: users = [], refetch } = useQuery({
     queryKey: ["users"],
@@ -27,24 +26,7 @@ export default function Alluser() {
     },
   });
 
-  // useEffect(() => {
-  //   fetch("https://server-site-gulamkibria775.vercel.app/newuser", {
-  //     // headers: {
-  //     //   authorization: `Bearer ${localStorage.getItem("genius-token")}`,
-  //     // },
-  //   })
-  //     .then((res) => {
-  //       console.log("problem", res);
-  //       if (res.status === 401 || res.status === 403) {
-  //         return logOut();
-  //       }
-  //       return res.json();
-  //     })
-  //     .then((data) => {
-  //       setOrders(data);
-  //     });
-  // }, [user?.email, logOut, signIn, stata, status]);
-
+  
   const handleDelete = (id) => {
     const proceed = window.confirm(
       "Are you sure, you want to cancel this status"
@@ -81,43 +63,12 @@ export default function Alluser() {
         if (data.modifiedCount > 0) {
           toast(" admin successfully");
           refetch();
-          // const remaining = orders.filter((odr) => odr._id !== id);
-          // const approving = orders.find((odr) => odr._id === id);
-          // approving.status = "Approved";
-
-          // const newOrders = [approving, ...remaining];
-          // setOrders(newOrders);
-
-          // window.location.reload()
+          
         }
       });
   };
 
-  // const StatusUpdate = (id) => {
-  //   setstata(!stata)
-
-  //   fetch(`https://server-site-gulamkibria775.vercel.app/orderstatus/${id}`, {
-  //     method: "PUT",
-  //     headers: {
-  //       "content-type": "application/json",
-  //       // authorization: `Bearer ${localStorage.getItem('genius-token')}`
-  //     },
-  //     body: JSON.stringify({ status: stata}),
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       // console.log(data);
-
-  //       if (data.modifiedCount > 0) {
-  //         const remaining = orders.filter((odr) => odr._id !== id);
-  //         const approving = orders.find((odr) => odr._id === id);
-  //         approving.status = "Approved";
-
-  //         const newOrders = [approving, ...remaining];
-  //         setOrders(newOrders);
-  //       }
-  //     });
-  // };
+ 
 
   return (
     <div>
@@ -146,23 +97,13 @@ export default function Alluser() {
                 // stata={stata}
               ></Userrow>
             ))}
-            {/* <tr>
-        <th>1</th>
-        <td>Cy Ganderton</td>
-        <td>Quality Control Specialist</td>
-
-        <td>Blue</td>
-        <td>Blue</td>
-        <td>Blue</td>
-      </tr> */}
+           
           </tbody>
         </table>
       </div>
     </div>
   );
 }
-
-// import React, { useContext, useEffect, useState } from 'react';
 // // import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 // import { AuthContext } from '../../../../contexts/AuthProvider/AuthProvider';
 // import OrderRow from './OrderRow';
@@ -268,3 +209,5 @@ export default function Alluser() {
 // };
 
 // export default Orders;
+
+
